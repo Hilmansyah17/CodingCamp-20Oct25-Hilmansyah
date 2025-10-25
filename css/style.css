@@ -10,6 +10,17 @@
     }
 }
 
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .animate-fade-in-up {
     animation: fadeInUp 1s ease-out;
 }
@@ -20,6 +31,25 @@
 
 .animate-delay-2 {
     animation-delay: 0.4s;
+}
+
+.animate-stagger {
+    animation: staggerFadeIn 0.5s ease-out forwards;
+}
+
+/* Mobile menu styles with slide animation from left */
+#mobile-nav {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Ensure it's positioned correctly within the header */
+    position: relative;
+    overflow: hidden; /* Prevent content overflow during animation */
+}
+
+/* Override Tailwind's hidden for animation */
+#mobile-nav.hidden {
+    display: none; /* Still use display none when fully hidden */
 }
 
 /* Mobile menu styles */
@@ -35,4 +65,3 @@
         display: none;
     }
 }
-
