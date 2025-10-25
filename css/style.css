@@ -1,0 +1,38 @@
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+.animate-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-2 {
+    animation-delay: 0.4s;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
